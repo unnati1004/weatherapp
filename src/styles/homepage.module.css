@@ -1,0 +1,256 @@
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  height: 10vh;
+  font-family: "Paytone One", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #145da0;
+}
+
+.heading {
+  font-size: 30px;
+}
+
+.navbar > div {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.searchbar input {
+  width: 500px;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  outline: #145da0;
+  background-color: #e3e8e9;
+}
+
+.searchbar button {
+  width: 100px;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 10px;
+  background-color: #e3e8e9;
+  border: none;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.searchbar button:hover {
+  background-color: #145da0;
+  color: white;
+}
+
+.switches {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.main {
+  display: flex;
+  height: 82vh;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+  font-family: "Kanit", sans-serif;
+}
+
+.main > div {
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.leftCont {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.leftCont > div {
+  border-radius: 15px;
+}
+
+.rightCont {
+  width: 30%;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 11, 93, 1) 0%,
+    rgba(14, 131, 154, 1) 100%
+  );
+  color: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: start;
+  border: 4px solid rgba(16, 16, 171, 1);
+  color: #1010ab;
+}
+
+.loadingDiv {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 200px;
+  height: 200px;
+}
+
+.icon img {
+  width: 100%;
+}
+
+.tempTxt {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.details {
+  width: 100%;
+  display: grid;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 11, 93, 1) 0%,
+    rgba(16, 16, 171, 1) 59%,
+    rgba(47, 190, 219, 1) 100%
+  );
+  color: white;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.details > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.forecastDiv {
+  flex-grow: 1;
+  border-bottom: 1px solid rgb(183, 182, 182);
+}
+
+/* Dark mode styles */
+.dark {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+}
+
+.dark .forecastDiv {
+  border-bottom: 1px solid rgb(173, 170, 170);
+}
+
+.dark .navbar {
+  color: white;
+}
+
+.dark .info {
+  color: white;
+}
+
+.dark .navbar button {
+  background-color: #5c5b5b;
+  color: white;
+}
+
+.dark .searchbar input {
+  background-color: #5c5b5b;
+  color: white;
+}
+
+.dark .searchbar button:hover {
+  background-color: #145da0;
+  color: white;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+    height: fit-content;
+    box-sizing: border-box;
+  }
+
+  .navbar > div {
+    width: 80%;
+  }
+
+  .main {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    height: fit-content;
+    margin-top: 30px;
+  }
+
+  .main > div {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .leftCont {
+    gap: 20px;
+  }
+
+  .details > div {
+    font-size: 12px;
+  }
+  .forecastDiv {
+    font-size: 12px;
+  }
+
+  .loadingDiv {
+    height: 60vh;
+  }
+}
